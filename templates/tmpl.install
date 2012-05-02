@@ -1,0 +1,56 @@
+<?php
+/**
+ * @file
+ * Installation file for  Module
+ */
+ 
+/**
+ * Implementation of hook_install()
+ */
+function asco_sso_install() {
+ 
+}
+
+/**
+ * Implements hook_schema()
+ */
+function asco_sso_schema() {
+  $schema['imis_map'] = array(
+  'description' => 'Mapping Drupal UID to IMIS',
+  'fields' => array(
+    'uid' => array(
+    'description' => 'Drupal ID',
+    'type' => 'int',
+    'not null' => TRUE,
+  ),
+  'imis' => array(
+    'description' => 'IMIS ID',
+    'type' => 'int',
+    'not null' => TRUE,
+    ),
+  'role' => array(
+    'description' => 'IMIS Roles',
+    'type' => 'varchar',
+    'length' => 255,
+    'not null' => FALSE,
+    'default' => '',
+    ),
+   'fullname' => array(
+    'description' => 'Fullname',
+    'type' => 'varchar',
+    'length' => 255,
+    'not null' => FALSE,
+    'default' => '',
+    ),
+   ),
+   'primary key' => array('uid'),
+ );
+  return $schema;
+}
+
+/**
+ * Implementation of hook_uninstall()
+ */
+function asco_sso_uninstall() {
+ 
+}
