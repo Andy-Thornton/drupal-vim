@@ -30,7 +30,9 @@ if has("autocmd")
   augroup END
 endif
 
-map <F2> :NERDTreeToggle<CR>
+" Setup the path the ctags for code profiling
 let Tlist_Ctags_Cmd = "/usr/bin/ctags"
 let Tlist_WinWidth = 50
+
+map <F2> :NERDTreeToggle<CR>
 map <F3> :TlistToggle<cr>
