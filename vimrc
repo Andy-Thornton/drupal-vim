@@ -31,5 +31,5 @@ endif
 
 map <F2> :NERDTreeToggle<CR>
 let Tlist_Ctags_Cmd = "/usr/bin/ctags"
-let Tlist_WinWidth = 50
+let Tlist_WinWidth = 70
 map <F3> :TlistToggle<cr>
