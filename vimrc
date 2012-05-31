@@ -13,7 +13,7 @@ set smartindent
 set showmatch
 set ruler
 set incsearch
-set number
+" set number
 
 autocmd! BufNewFile * silent! 0r ~/.vim/templates/tmpl.%:e
 
