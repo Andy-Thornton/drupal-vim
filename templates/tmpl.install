@@ -7,14 +7,14 @@
 /**
  * Implementation of hook_install()
  */
-function asco_sso_install() {
+function foo_install() {
  
 }
 
 /**
  * Implements hook_schema()
  */
-function asco_sso_schema() {
+function foo_schema() {
   $schema['imis_map'] = array(
   'description' => 'Mapping Drupal UID to IMIS',
   'fields' => array(
@@ -51,6 +51,6 @@ function asco_sso_schema() {
 /**
  * Implementation of hook_uninstall()
  */
-function asco_sso_uninstall() {
+function foo_uninstall() {
  
 }
