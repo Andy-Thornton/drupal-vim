@@ -16,27 +16,27 @@ function foo_install() {
  */
 function foo_schema() {
   $schema['imis_map'] = array(
-  'description' => 'Mapping Drupal UID to IMIS',
+  'description' => '',
   'fields' => array(
     'uid' => array(
-    'description' => 'Drupal ID',
+    'description' => '',
     'type' => 'int',
     'not null' => TRUE,
   ),
   'imis' => array(
-    'description' => 'IMIS ID',
+    'description' => '',
     'type' => 'int',
     'not null' => TRUE,
     ),
   'role' => array(
-    'description' => 'IMIS Roles',
+    'description' => '',
     'type' => 'varchar',
     'length' => 255,
     'not null' => FALSE,
     'default' => '',
     ),
    'fullname' => array(
-    'description' => 'Fullname',
+    'description' => '',
     'type' => 'varchar',
     'length' => 255,
     'not null' => FALSE,
