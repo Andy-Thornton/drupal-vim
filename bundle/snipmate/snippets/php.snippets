@@ -9396,6 +9396,36 @@ snippet hook_language_fallback_candidates_alter
 	  ${1:/* Your code here */}
 	}
 snippet info Drupal 7 Module
-	name = "Module Name (D7)"
+	name = "Really Neat Widget"
+	description = Provides a really neat widget for your site.
+	core = 7.x
+	package = Views
+	scripts[] = somescript.js
+	dependencies[] = views
+	dependencies[] = panels
+	files[] = example.test
+	configure = admin/config/content/example
+	hidden = TRUE
 snippet info Drupal 7 Theme
 	name = "Theme Name (D7)"
+	engine = phptemplate
+	screenshot = screenshot.png
+	stylesheets[all][] = style.css
+	scripts[] = script.js
+	features[] = logo
+	features[] = name
+	features[] = slogan
+	features[] = node_user_picture
+	features[] = comment_user_picture
+	features[] = favicon
+	features[] = main_menu
+	features[] = secondary_menu
+	regions[sidebar_first]  = Left sidebar
+	regions[sidebar_second] = Right sidebar
+	regions[content] = Content
+	regions[header] = Header
+	regions[footer] = Footer
+	regions[highlighted] = Highlighted
+	regions[help] = Help
+	regions[page_top] = Page Top
+	regions[page_bottom] = Page Bottom
