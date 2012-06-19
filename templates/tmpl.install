@@ -15,7 +15,7 @@ function foo_install() {
  * Implements hook_schema()
  */
 function foo_schema() {
-  $schema['imis_map'] = array(
+  $schema['my_spiffy_table'] = array(
   'description' => '',
   'fields' => array(
     'uid' => array(
