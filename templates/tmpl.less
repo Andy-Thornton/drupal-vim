@@ -1,1 +1,215 @@
-// Less
+.pie { behavior: url(/sites/all/libraries/PIE/PIE.htc);}
+
+
+@brightblue: #3495b5;
+@dkblue: #233366;
+@logoblue: #23445b;
+@ltgreen: #6b9227;
+@mdgreen: #5b880c;
+@dkgreen: #4e6b1c;
+@dkgray: #333;
+@mdgray: #c9c9c9;
+@ltgray: #eee;
+@textgray: #333;
+@lttextgray: #555;
+@whitegray: #f3f3f3;
+
+@base: @mdgray;
+@transparent: rgba(255, 255, 255, 0);
+
+
+@lighten1: lighten(@base, 60%);
+@lighten2: lighten(@base, 35%);
+@lighten3: lighten(@base, 40%);
+@lighten4: lighten(@base, 45%);
+@darken1: darken(@base, 15%);
+@darken2: saturate(@darken1, 10%);
+
+@basesize: 1em;
+
+
+.opacity (@opacity) {
+    @opacityPercentage: @opacity * 100;
+    opacity: @opacity;
+    -ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(opacity=(@{opacityPercentage}))"; 
+    filter: ~"alpha(opacity = (@{opacityPercentage}))";
+    filter:alpha(opacity=@opacity);
+    zoom:1;
+}
+
+
+
+@font-face {
+    font-family: 'Webfont';
+    src: url('fertigo_pro-webfont-webfont.eot');
+    src: url('fertigo_pro-webfont-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fertigo_pro-webfont-webfont.woff') format('woff'),
+         url('fertigo_pro-webfont-webfont.ttf') format('truetype'),
+         url('fertigo_pro-webfont-webfont.svg#Webfont') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'WebfontRegular';
+    src: url('fertigo_pro-webfont-webfont.eot');
+    src: url('fertigo_pro-webfont-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fertigo_pro-webfont-webfont.woff') format('woff'),
+         url('fertigo_pro-webfont-webfont.ttf') format('truetype'),
+         url('fertigo_pro-webfont-webfont.svg#WebfontRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'FertigoProRegular';
+    src: url('fertigo_pro-webfont.eot');
+    src: url('fertigo_pro-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fertigo_pro-webfont.woff') format('woff'),
+         url('fertigo_pro-webfont.ttf') format('truetype'),
+         url('fertigo_pro-webfont.svg#FertigoProRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.display {font-family: 'Webfont' , 'WebfontRegular' , 'FertigoProRegular' , 'Georgia', 'Times' , 'Times New Roman' , serif;}
+.sans {	font-family: 'Verdana' , 'Helvetica' , 'Arial', sans-serif;}
+.serif {font-family: 'Georgia', 'Times' , 'Times New Roman' , serif;}
+
+.thin {
+	font-weight: normal;
+	font-weight: 100;
+}
+
+.thick {
+	font-weight: bold;
+	font-weight: 600;
+}
+.allcaps {
+	text-transform: uppercase;
+}
+
+
+
+
+/* Mixins */
+
+.inline-block {
+	display:inline-block;
+	zoom:1;
+	*display:inline;
+}
+
+.clearfix {
+  display: block;
+}
+.clearfix:after,
+.clearfix-after {
+  content: " ";
+  clear: both;
+  display: block;
+  font-size: 0;
+  height: 0;
+  line-height: 0;
+  visibility: hidden;
+  width: 0;
+}
+
+.box-shadow(@horizontal: 0px, @vertical: 0px, @blur: 10px, @color: #aaa) {
+  .pie;
+  -webkit-box-shadow: @color @horizontal @vertical @blur ;
+  -moz-box-shadow: @color @horizontal @vertical @blur ;
+  box-shadow: @color @horizontal @vertical @blur ;
+  position: relative;
+}
+.inset-box-shadow(@horizontal: 0px, @vertical: 1px, @blur: 2px, @color: #CCC) {
+  -webkit-box-shadow: inset @horizontal @vertical @blur @color;
+  -moz-box-shadow: inset @horizontal @vertical @blur @color;
+  box-shadow: inset @horizontal @vertical @blur @color;
+  .pie;
+  position: relative;
+}
+.shadow-block {
+	background: white;
+	.box-shadow;
+	margin-bottom: 15px;
+		
+		.block-inner {
+		padding: 5px 10px;
+		}
+		.field-item {
+		padding: 5px;
+		}
+}
+
+.border-radius(@topLeft: 5px, @topRight: 5px, @bottomRight: 5px, @bottomLeft: 5px) {
+	border-radius: @topLeft @topRight @bottomRight @bottomLeft;
+    -webkit-border-top-left-radius: @topLeft;
+    -webkit-border-top-right-radius: @topRight;
+    -webkit-border-bottom-right-radius: @bottomRight;
+    -webkit-border-bottom-left-radius: @bottomLeft;
+    -moz-border-radius-topleft: @topLeft;
+    -moz-border-radius-topright: @topRight;
+    -moz-border-radius-bottomright: @bottomRight;
+    -moz-border-radius-bottomleft: @bottomLeft;
+    border-top-left-radius: @topLeft;
+    border-top-right-radius: @topRight;
+    border-bottom-right-radius: @bottomRight;
+    border-bottom-left-radius: @bottomLeft;
+    .pie;
+}
+
+
+.vertical-gradient(@start: #000, @stop: #FFF, @positionone: 0%, @positiontwo: 100%) {
+    background: (@start + @stop) / 2;
+    background: linear-gradient(top, @start @positionone, @stop @positiontwo);
+    background: -moz-linear-gradient(top, @start @positionone,  @stop @positiontwo); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(@positionone, @start), color-stop(@positiontwo,@stop)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, @start @positionone, @stop @positiontwo); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, @start @positionone, @stop @positiontwo); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, @start @positionone, @stop @positiontwo); /* IE10+ */
+	-pie-background: linear-gradient(@start, @stop);
+	    .pie;
+}
+.horizontal-gradient {
+background: @transparent; /* Old browsers */
+background: -moz-linear-gradient(left,  @transparent 0%, @mdgray 40%, @mdgray 60%, @transparent 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,@transparent), color-stop(40%,@mdgray),color-stop(60%,@mdgray), color-stop(100%,@transparent)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left,  @transparent 0%,@mdgray 40%, @mdgray 60%,@transparent 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left,  @transparent 0%,@mdgray 40%, @mdgray 60%,@transparent 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left,  @transparent 0%,@mdgray 40%, @mdgray 60%,@transparent 100%); /* IE10+ */
+background: linear-gradient(to right,  @transparent 0%,@mdgray 40%, @mdgray 60%,@transparent 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 */
+.pie;
+
+}
+
+
+
+.vertical-gradient-white {
+	.vertical-gradient(@lighten2, white, 50%, 110%);
+}
+
+.float_right {
+	float: right;
+	margin: 0 0 20px 20px;
+}
+
+.float_left {
+	float: left;
+	margin: 0 20px 20px 0;
+}
+
+.no-bullets {
+	background-image:none !important;
+	padding-left: 0;
+}
