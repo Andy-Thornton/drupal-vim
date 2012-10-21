@@ -1,6 +1,6 @@
-X-Ayatana-Desktop-Shortcuts=${1:}
+Categories=${1:}
 
-[${2:} Shortcut Group]
+[Desktop Action ${2:}]
 Name=${3:}
 Exec=${4:}
 TargetEnvironment=Unity
