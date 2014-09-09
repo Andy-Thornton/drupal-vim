@@ -15,3 +15,8 @@ http://www.vim.org/scripts/script.php?script_id=273
 
 Slideshow Demo
 http://bit.ly/drupal-development-with-vim
+
+Python Editting
+===============
+
+Python code added as a result of this article - http://henry.precheur.org/vim/python
