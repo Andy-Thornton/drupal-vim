@@ -1,0 +1,39 @@
+call pathogen#infect()
+call pathogen#helptags()
+
+filetype plugin indent on
+syntax on
+
+" In accordiance with pep 8
+set textwidth=79  
+set shiftwidth=4
+set tabstop=4
+set expandtab 
+set softtabstop=4 " insert/delete 4 spaces when hitting a TAB/BACKSPACE
+set shiftround    " round indent to multiple of 'shiftwidth'
+set autoindent    " align the new line indent with the previous line
+
+set nocompatible
+set showmatch
+set ruler
+set incsearch
+set t_Co=256
+
+autocmd! BufNewFile * silent! 0r ~/.vim/templates/tmpl.%:e
+
+" Using vim with Drupal http://drupal.org/node/29325
+
+if has("autocmd")
+  augroup module
+    autocmd BufRead,BufNewFile *.py set filetype=python
+    autocmd BufRead,BufNewFile *.css set filetype=css
+    autocmd BufRead,BufNewFile *.desktop set filetype=desktop
+  augroup END
+endif
+
+" Setup the path the ctags for code profiling
+let Tlist_Ctags_Cmd = "/usr/bin/ctags"
+let Tlist_WinWidth = 50
+
+map <F2> :NERDTreeToggle<CR>
+map <F3> :TlistToggle<cr>
