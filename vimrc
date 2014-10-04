@@ -40,3 +40,6 @@ let Tlist_WinWidth = 50
 
 map <F2> :NERDTreeToggle<CR>
 map <F3> :TlistToggle<cr>
+
+set background=dark
+colorscheme moss
