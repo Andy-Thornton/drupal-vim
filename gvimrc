@@ -1,3 +1,3 @@
 set background=dark
 colorscheme solarized
-set guifont=Bitstream\ Vera\ Sans\ Mono\ 11
+set guifont=Monospace\ 10
