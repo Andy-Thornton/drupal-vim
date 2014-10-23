@@ -41,7 +41,8 @@ let Tlist_WinWidth = 50
 map <F2> :NERDTreeToggle<CR>
 map <F3> :TlistToggle<cr>
 
-let g:zenburn_force_dark_Background = 1
 set background=dark
+colors zenburn
+let g:zenburn_force_dark_Background = 1
 let g:zenburn_high_Contrast=1
 syn on
