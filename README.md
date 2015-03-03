@@ -11,7 +11,7 @@ Plugins Installed
 * Snipmate
 * fugitive
 
-Python Editting
+Python Editing
 ===============
 
 Python code added as a result of this article - http://henry.precheur.org/vim/python
