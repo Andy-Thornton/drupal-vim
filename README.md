@@ -15,3 +15,5 @@ Python Editing
 ===============
 
 Python code added as a result of this article - http://henry.precheur.org/vim/python
+
+Theme used, zenburst. Thanks to Michael Clayton for his help with the theme.
