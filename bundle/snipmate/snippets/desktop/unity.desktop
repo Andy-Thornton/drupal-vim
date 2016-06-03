@@ -1,7 +1,0 @@
-Categories=${1:}
-
-[Desktop Action ${2:}]
-Name=${3:}
-Exec=${4:}
-TargetEnvironment=Unity
-
