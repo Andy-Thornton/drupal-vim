@@ -14,13 +14,11 @@ set showmatch
 set ruler
 set incsearch
 set t_Co=256
-
-" set number
+set number
 
 autocmd! BufNewFile * silent! 0r ~/.vim/templates/tmpl.%:e
 
 " Using vim with Drupal http://drupal.org/node/29325
-
 if has("autocmd")
   augroup module
     autocmd BufRead,BufNewFile *.module set filetype=php
@@ -33,6 +31,22 @@ if has("autocmd")
     autocmd BufRead,BufNewFile *.adoc set filetype=asciidoc
     autocmd BufWritePost *.less exe '!lessc ' . shellescape(expand('<afile>')) . ' > ' . shellescape(expand('<afile>:r')) . '.css'
   augroup END
+endif
+
+" Syntastic to use the drupal coding standards
+let g:syntastic_php_phpcs_args="--standard=Drupal,DrupalPractice --extensions=php,module,inc,install,test,profile,theme"
+if has('statusline')
+  set laststatus=2
+  set statusline=%<%f\ " Filename
+  set statusline+=%w%h%m%r " Options
+  set statusline+=%{fugitive#statusline()} " Git Hotness
+  set statusline+=\ [%{&ff}/%Y] " filetype
+  set statusline+=\ [%{getcwd()}] " current dir
+  set statusline+=%#warningmsg#
+  set statusline+=%{SyntasticStatuslineFlag()}
+  set statusline+=%*
+  let g:syntastic_enable_signs=1
+  set statusline+=%=%-14.(%l,%c%V%)\ %p%% " Right aligned file nav info
 endif
 
 " Setup the path the ctags for code profiling
