@@ -53,6 +53,17 @@ endif
 let Tlist_Ctags_Cmd = "/usr/bin/ctags"
 let Tlist_WinWidth = 50
 
+" Buffer navigation
+nnoremap <S-left> :bprev<CR>
+nnoremap <S-right> :bnext<CR>
+
+
+" Airline plugin
+let g:airline#extensions#tabline#enabled = 1      
+let g:airline#extensions#tabline#left_sep = ''    
+let g:airline#extensions#tabline#left_alt_sep = ''
+
+" Handy mappings
 map <F2> :NERDTreeToggle<CR>
 map <F3> :TlistToggle<cr>
 
