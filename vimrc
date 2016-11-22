@@ -31,6 +31,11 @@ if has("autocmd")
     autocmd BufRead,BufNewFile *.adoc set filetype=asciidoc
     autocmd BufWritePost *.less exe '!lessc ' . shellescape(expand('<afile>')) . ' > ' . shellescape(expand('<afile>:r')) . '.css'
   augroup END
+  augroup markdown
+    au!
+    au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
+  augroup END
+
 endif
 
 " Syntastic to use the drupal coding standards
