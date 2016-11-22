@@ -14,7 +14,7 @@ set showmatch
 set ruler
 set incsearch
 set t_Co=256
-set number
+set nonumber
 
 autocmd! BufNewFile * silent! 0r ~/.vim/templates/tmpl.%:e
 
