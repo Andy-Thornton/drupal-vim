@@ -20,6 +20,21 @@ Themes
 ======
 Theme used, zenburst. Thanks to Michael Clayton for his help.
 
+Syntax support
+==============
+* Asciidoc
+* Conky
+* Emender
+* Desktop shortcuts (Linux)
+* Javascript
+* Nginx
+* PHP
+* Snippets
+* Python
+* CSS
+* GitHub Markdown
+* Less
+
 ASCIIDOC Support
 ================
 Sample template for an asciidoc article using the .adoc extension is included and syntax highlighting turned on for .adoc files. To use syntax highlighting on .txt files, you can use one of the following approaches.
