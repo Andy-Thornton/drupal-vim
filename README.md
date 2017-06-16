@@ -11,12 +11,14 @@ Plugins Installed
 * Snipmate
 * fugitive
 
-Python Editing
-===============
+Python
+======
 
-Python code added as a result of this article - http://henry.precheur.org/vim/python
+Python syntax included along with code referenced in this article  http://henry.precheur.org/vim/python
 
-Theme used, zenburst. Thanks to Michael Clayton for his help with the theme.
+Themes
+======
+Theme used, zenburst. Thanks to Michael Clayton for his help.
 
 ASCIIDOC Support
 ================
