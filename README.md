@@ -17,3 +17,12 @@ Python Editing
 Python code added as a result of this article - http://henry.precheur.org/vim/python
 
 Theme used, zenburst. Thanks to Michael Clayton for his help with the theme.
+
+ASCIIDOC Support
+================
+Sample template for an asciidoc article using the .adoc extension is included and syntax highlighting turned on for .adoc files. To use syntax highlighting on .txt files, you can use one of the following approaches.
+
+* use the command :set syntax=asciidoc
+* add to the bottom of the file  //vim: set syntax=asciidoc
+
+For more information, checkout the asciidoc github repo https://github.com/asciidoc/vim-asciidoc
