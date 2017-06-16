@@ -18,7 +18,7 @@ Python syntax included along with code referenced in this article  http://henry.
 
 Themes
 ======
-Theme used, zenburst. Thanks to Michael Clayton for his help.
+Default theme used is zenburst (Thanks to Michael Clayton for his help). I have a number of themes installed, you can change the theme for both vim and gvim in their config files.
 
 Syntax support
 ==============
@@ -34,6 +34,8 @@ Syntax support
 * CSS
 * GitHub Markdown
 * Less
+* JSON
+* Groovy
 
 ASCIIDOC Support
 ================
