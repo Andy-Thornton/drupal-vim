@@ -1,20 +1,21 @@
-- - -
-1\. [Introduction](#introduction)
-2\. [Plugins](#plugins)
-3\. [Python](#python)
-4\. [Themes](#themes)
-5\. [Syntax](#syntax)
 
-- - -
+<!-- vim-markdown-toc GFM -->
+* [Introduction](#introduction)
+  * [Plugins Installed](#plugins-installed)
+  * [Python support](#python-support)
+  * [Themes](#themes)
+  * [Syntax Support](#syntax-support)
+  * [ASCIIDOC Support](#asciidoc-support)
+
+<!-- vim-markdown-toc -->
 
 <a name="introduction"></a>
 
-## 1\. Introduction
+## Introduction
 
 I gave a [Demo](http://bit.ly/drupal-development-with-vim) of my Vim setup that I use for Drupal and general Linux development a while back. Here's my current Vim setup. I'll work on improving the documentation when I have free time. Let me know if you find any problems or have suggestions for improvements. 
 
-Plugins Installed
-=================
+### Plugins Installed
 
 | Plugin   | Description|
 |-------------|------------------------------------------------------------------------------------------------|
@@ -28,23 +29,21 @@ Plugins Installed
 
 <a name="python"></a>
 
-## 3\. Python support
+### Python support
 
 Python syntax included along with code referenced in this article  http://henry.precheur.org/vim/python
 
 
 <a name="themes"></a>
 
-## 4\. Themes
+### Themes
 Default theme used is zenburst (Thanks to Michael Clayton for his help). I have a number of themes installed, you can change the theme for both vim and gvim in their config files.
 
 
 <a name="syntax"></a>
 
-## 5\. Themes
+### Syntax Support
 
-Syntax support
-==============
 * Asciidoc
 * Conky
 * Emender
@@ -60,8 +59,7 @@ Syntax support
 * JSON
 * Groovy
 
-ASCIIDOC Support
-================
+### ASCIIDOC Support
 Sample template for an asciidoc article using the .adoc extension is included and syntax highlighting turned on for .adoc files. To use syntax highlighting on .txt files, you can use one of the following approaches.
 
 * use the command :set syntax=asciidoc
