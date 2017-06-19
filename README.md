@@ -37,7 +37,7 @@ Python syntax included along with code referenced in this article  http://henry.
 <a name="themes"></a>
 
 ## Themes
-Default theme used is zenburst (Thanks to Michael Clayton for his help). I have a number of themes installed, you can change the theme for both vim and gvim in their config files.
+Default theme used is zenburn (Thanks to Michael Clayton for his help). I have a number of themes installed, you can change the theme for both vim and gvim in their config files.
 
 
 <a name="syntax"></a>
