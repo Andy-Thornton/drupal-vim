@@ -6,7 +6,7 @@ syntax on
 
 set nocompatible
 set expandtab
-set tabstop=2
+
 set shiftwidth=2
 set autoindent
 set smartindent
@@ -38,8 +38,6 @@ if has("autocmd")
 
 endif
 
-" Syntastic to use the drupal coding standards
-let g:syntastic_php_phpcs_args="--standard=Drupal,DrupalPractice --extensions=php,module,inc,install,test,profile,theme"
 if has('statusline')
   set laststatus=2
   set statusline=%<%f\ " Filename
