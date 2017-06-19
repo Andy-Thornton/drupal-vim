@@ -4,12 +4,12 @@ https://github.com/Andy-Thornton/drupal-vim
 Plugins Installed
 =================
 
-| Plugin   | Homepage                                             |
-|----------|------------------------------------------------------|
-| NERDTree | http://www.vim.org/scripts/script.php?script_id=1658 |
+| Plugin   | Description|
+|----------|-----------------------------------------------------------------------|
+| [NERDTree](http://www.vim.org/scripts/script.php?script_id=1658)| Filemanager    |
 | Taglist  |                                                      |
 | Fugitive |                                                      |
-| Drupal   | http://drupal.org/node/1389006                       |
+| [Drupal](http://drupal.org/node/1389006)                        | Drupal Support |
 
 
 * Drupal Plugin - * NERDtree - http://www.vim.org/scripts/script.php?script_id=1658
