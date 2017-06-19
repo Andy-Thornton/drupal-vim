@@ -5,19 +5,17 @@ Plugins Installed
 =================
 
 | Plugin   | Description|
-|----------|-----------------------------------------------------------------------|
-| [NERDTree](http://www.vim.org/scripts/script.php?script_id=1658)| Filemanager    |
-| Taglist  |                                                      |
-| Fugitive |                                                      |
-| [Drupal](http://drupal.org/node/1389006)                        | Drupal Support |
+|-------------|------------------------------------------------------------------------------------------------|
+| [NERDTree](http://www.vim.org/scripts/script.php?script_id=1658)| Filemanager                                |
+| [Taglist](http://www.vim.org/scripts/script.php?script_id=273)  | Support for code profiling, using CTAGS    |
+| Fugitive | Git support                                          |
+| [Drupal](http://drupal.org/node/1389006)                        | Drupal Support                             |
+| [Bash Support](http://www.vim.org/scripts/script.php?script_id=365)| Improved Bash Scripting  Support                             |
 
 
-* Drupal Plugin - * NERDtree - http://www.vim.org/scripts/script.php?script_id=1658
-* Taglist http://www.vim.org/scripts/script.php?script_id=273
-* Slideshow Demo - http://bit.ly/drupal-development-with-vim
+Slideshow Demo - http://bit.ly/drupal-development-with-vim
 * Airline + Themes
 * Bash support
-* Fugitive
 
 Python
 ======
