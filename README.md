@@ -1,5 +1,6 @@
-GitHub repo available here:
-https://github.com/Andy-Thornton/drupal-vim
+
+
+I gave a [Demo](http://bit.ly/drupal-development-with-vim) of my Vim setup that I use for Drupal and general Linux development a while back. Here's my current Vim setup. I'll work on improving the documentation when I have free time. Let me know if you find any problems or have suggestions for improvements. 
 
 Plugins Installed
 =================
@@ -8,14 +9,12 @@ Plugins Installed
 |-------------|------------------------------------------------------------------------------------------------|
 | [NERDTree](http://www.vim.org/scripts/script.php?script_id=1658)| Filemanager                                |
 | [Taglist](http://www.vim.org/scripts/script.php?script_id=273)  | Support for code profiling, using CTAGS    |
-| Fugitive | Git support                                          |
+| [Fugitive](http://www.vim.org/scripts/script.php?script_id=2975)| Git support                                |
 | [Drupal](http://drupal.org/node/1389006)                        | Drupal Support                             |
-| [Bash Support](http://www.vim.org/scripts/script.php?script_id=365)| Improved Bash Scripting  Support                             |
+| [Bash Support](http://www.vim.org/scripts/script.php?script_id=365)| Improved Bash Scripting  Support        |
+| [Airline](http://www.vim.org/scripts/script.php?script_id=4661)| Status line improvements.                   |
 
 
-Slideshow Demo - http://bit.ly/drupal-development-with-vim
-* Airline + Themes
-* Bash support
 
 Python
 ======
