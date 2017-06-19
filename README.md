@@ -1,4 +1,15 @@
+- - -
+1\. [Introduction](#introduction)
+2\. [Plugins](#plugins)
+3\. [Python](#python)
+4\. [Themes](#themes)
+5\. [Syntax](#syntax)
 
+- - -
+
+<a name="introduction"></a>
+
+## 1\. Introduction
 
 I gave a [Demo](http://bit.ly/drupal-development-with-vim) of my Vim setup that I use for Drupal and general Linux development a while back. Here's my current Vim setup. I'll work on improving the documentation when I have free time. Let me know if you find any problems or have suggestions for improvements. 
 
@@ -15,15 +26,22 @@ Plugins Installed
 | [Airline](http://www.vim.org/scripts/script.php?script_id=4661)| Status line improvements.                   |
 
 
+<a name="python"></a>
 
-Python
-======
+## 3\. Python support
 
 Python syntax included along with code referenced in this article  http://henry.precheur.org/vim/python
 
-Themes
-======
+
+<a name="themes"></a>
+
+## 4\. Themes
 Default theme used is zenburst (Thanks to Michael Clayton for his help). I have a number of themes installed, you can change the theme for both vim and gvim in their config files.
+
+
+<a name="syntax"></a>
+
+## 5\. Themes
 
 Syntax support
 ==============
