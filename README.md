@@ -1,21 +1,21 @@
 
 <!-- vim-markdown-toc GFM -->
 * [Introduction](#introduction)
-  * [Plugins Installed](#plugins-installed)
-  * [Python support](#python-support)
-  * [Themes](#themes)
-  * [Syntax Support](#syntax-support)
+* [Plugins](#plugins)
+* [Python](#python)
+* [Themes](#themes)
+* [Syntax](#syntax)
   * [ASCIIDOC Support](#asciidoc-support)
 
 <!-- vim-markdown-toc -->
 
-<a name="introduction"></a>
 
-## Introduction
+Introduction
+------------
 
 I gave a [Demo](http://bit.ly/drupal-development-with-vim) of my Vim setup that I use for Drupal and general Linux development a while back. Here's my current Vim setup. I'll work on improving the documentation when I have free time. Let me know if you find any problems or have suggestions for improvements. 
 
-### Plugins Installed
+## Plugins 
 
 | Plugin   | Description|
 |-------------|------------------------------------------------------------------------------------------------|
@@ -29,20 +29,20 @@ I gave a [Demo](http://bit.ly/drupal-development-with-vim) of my Vim setup that 
 
 <a name="python"></a>
 
-### Python support
+## Python 
 
 Python syntax included along with code referenced in this article  http://henry.precheur.org/vim/python
 
 
 <a name="themes"></a>
 
-### Themes
+## Themes
 Default theme used is zenburst (Thanks to Michael Clayton for his help). I have a number of themes installed, you can change the theme for both vim and gvim in their config files.
 
 
 <a name="syntax"></a>
 
-### Syntax Support
+## Syntax
 
 * Asciidoc
 * Conky
