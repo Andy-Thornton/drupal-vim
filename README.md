@@ -4,12 +4,20 @@ https://github.com/Andy-Thornton/drupal-vim
 Plugins Installed
 =================
 
-* Drupal Plugin - http://drupal.org/node/1389006
-* NERDtree - http://www.vim.org/scripts/script.php?script_id=1658
+| Plugin   | Homepage                                             |
+|----------|------------------------------------------------------|
+| NERDTree | http://www.vim.org/scripts/script.php?script_id=1658 |
+| Taglist  |                                                      |
+| Fugitive |                                                      |
+| Drupal   | http://drupal.org/node/1389006                       |
+
+
+* Drupal Plugin - * NERDtree - http://www.vim.org/scripts/script.php?script_id=1658
 * Taglist http://www.vim.org/scripts/script.php?script_id=273
 * Slideshow Demo - http://bit.ly/drupal-development-with-vim
-* Snipmate
-* fugitive
+* Airline + Themes
+* Bash support
+* Fugitive
 
 Python
 ======
