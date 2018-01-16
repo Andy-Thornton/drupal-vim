@@ -19,6 +19,7 @@ set nonumber
 autocmd! BufNewFile * silent! 0r ~/.vim/templates/tmpl.%:e
 
 " Using vim with Drupal http://drupal.org/node/29325
+let g:syntastic_php_phpcs_args="--standard=Drupal --extensions=php,module,inc,install,test,profile,theme"
 if has("autocmd")
   augroup module
     autocmd BufRead,BufNewFile *.module set filetype=php
@@ -30,10 +31,6 @@ if has("autocmd")
     autocmd BufRead,BufNewFile *.less set filetype=less
     autocmd BufRead,BufNewFile *.adoc set filetype=asciidoc
     autocmd BufWritePost *.less exe '!lessc ' . shellescape(expand('<afile>')) . ' > ' . shellescape(expand('<afile>:r')) . '.css'
-  augroup END
-  augroup markdown
-    au!
-    au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
   augroup END
 
 endif
