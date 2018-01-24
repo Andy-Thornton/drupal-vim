@@ -30,7 +30,6 @@ if has("autocmd")
     autocmd BufRead,BufNewFile *.desktop set filetype=desktop
     autocmd BufRead,BufNewFile *.less set filetype=less
     autocmd BufRead,BufNewFile *.adoc set filetype=asciidoc
-    autocmd BufWritePost *.less exe '!lessc ' . shellescape(expand('<afile>')) . ' > ' . shellescape(expand('<afile>:r')) . '.css'
   augroup END
 
 endif
