@@ -24,6 +24,7 @@ I gave a [Demo](http://bit.ly/drupal-development-with-vim) of my Vim setup that 
 | [Drupal](http://drupal.org/node/1389006)                        | Drupal Support                             |
 | [Bash Support](http://www.vim.org/scripts/script.php?script_id=365)| Improved Bash Scripting  Support        |
 | [Airline](http://www.vim.org/scripts/script.php?script_id=4661)| Status line improvements.                   |
+| [GitGutter](https://github.com/jisaacks/GitGutter)| Inline Git notifications                   |
 
 
 ## Python 
