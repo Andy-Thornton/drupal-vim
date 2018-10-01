@@ -63,7 +63,7 @@ func! WordProcessorMode()
   map j gj 
   map k gk
   setlocal spell spelllang=en_us 
-  set thesaurus+=/Users/sbrown/.vim/thesaurus/mthesaur.txt
+  set thesaurus+=~/.vim/thesaurus/mthesaur.txt
   set complete+=s
   set formatprg=par
   setlocal wrap 
