@@ -86,6 +86,14 @@ let g:airline_right_alt_sep = ''
 let g:airline_powerline_fonts=0
 let g:airline#extensions#branch#enabled=1
 
+" Pencil
+augroup pencil
+  autocmd!
+  autocmd FileType markdown,md call pencil#init()
+  autocmd FileType text         call pencil#init()
+  autocmd FileType adoc         call pencil#init()
+augroup END
+
 " Distraction Free Writing
 function! s:goyo_enter()
 "  silent !tmux set status off
