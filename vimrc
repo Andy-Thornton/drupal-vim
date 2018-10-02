@@ -62,7 +62,7 @@ func! WordProcessorMode()
   setlocal noexpandtab 
   map j gj 
   map k gk
-  setlocal spell spelllang=en_us 
+  setlocal spell spelllang=en_gb 
   set thesaurus+=~/.vim/thesaurus/mthesaur.txt
   set complete+=s
   set formatprg=par
@@ -86,9 +86,43 @@ let g:airline_right_alt_sep = ''
 let g:airline_powerline_fonts=0
 let g:airline#extensions#branch#enabled=1
 
+" Distraction Free Writing
+function! s:goyo_enter()
+"  silent !tmux set status off
+"  silent !tmux list-panes -F '\#F' | grep -q Z || tmux resize-pane -Z
+  set noshowmode
+  set noshowcmd
+  set scrolloff=999
+endfunction
+
+function! s:goyo_leave()
+"  silent !tmux set status on
+"  silent !tmux list-panes -F '\#F' | grep -q Z && tmux resize-pane -Z
+  set showmode
+  set showcmd
+  set scrolloff=5
+endfunction
+
+function! g:GoyoBefore()
+  set list!
+  set wrap
+  set linebreak
+  set nocursorcolumn
+  set nonumber
+  set norelativenumber
+  let b:quitting = 0
+  let b:quitting_bang = 0
+  autocmd QuitPre <buffer> let b:quitting = 1
+  cabbrev <buffer> q! let b:quitting_bang = 1 <bar> q!
+endfunction
+
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
+autocmd! User GoyoLeave nested call <SID>goyo_leave()
+
 " Handy mappings
 map <F2> :NERDTreeToggle<CR>
 map <F3> :TlistToggle<cr>
+map <F4> :Goyo<cr>
 
 set background=dark
 colors zenburn
