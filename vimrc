@@ -19,7 +19,6 @@ set nonumber
 autocmd! BufNewFile * silent! 0r ~/.vim/templates/tmpl.%:e
 
 " Using vim with Drupal http://drupal.org/node/29325
-let g:syntastic_php_phpcs_args="--standard=Drupal --extensions=php,module,inc,install,test,profile,theme"
 let g:DisableAutoPHPFolding = 1
 if has("autocmd")
   augroup module
