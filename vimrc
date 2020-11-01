@@ -15,6 +15,7 @@ set ruler
 set incsearch
 set t_Co=256
 set nonumber
+set cursorline
 
 autocmd! BufNewFile * silent! 0r ~/.vim/templates/tmpl.%:e
 
@@ -102,6 +103,12 @@ endfunction
 " automatically initialize buffer by file type
 autocmd FileType markdown,mkd,text,adoc call Prose()
 
+augroup pencil
+  autocmd!
+  autocmd FileType markdown,mkd call pencil#init()
+  autocmd FileType text         call pencil#init()
+augroup END
+
 " invoke manually by command for other file types
 command! -nargs=0 Prose call Prose()
 
@@ -139,9 +146,7 @@ autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
 " Handy mappings
-map <F2> :NERDTreeToggle<CR>
-map <F3> :TlistToggle<cr>
-map <F4> :Goyo<cr>
+map <F2> :Goyo<cr>
 
 set background=dark
 colors zenburn

@@ -18,12 +18,8 @@ I gave a [Demo](http://bit.ly/drupal-development-with-vim) of my Vim setup that 
 
 | Plugin   | Description|
 |-------------|------------------------------------------------------------------------------------------------|
-| [NERDTree](http://www.vim.org/scripts/script.php?script_id=1658)| Filemanager                                |
 | [Taglist](http://www.vim.org/scripts/script.php?script_id=273)  | Support for code profiling, using CTAGS    |
-| [Fugitive](http://www.vim.org/scripts/script.php?script_id=2975)| Git support                                |
-| [Drupal](http://drupal.org/node/1389006)                        | Drupal Support                             |
 | [Bash Support](http://www.vim.org/scripts/script.php?script_id=365)| Improved Bash Scripting  Support        |
-| [Airline](http://www.vim.org/scripts/script.php?script_id=4661)| Status line improvements.                   |
 | [GitGutter](https://github.com/jisaacks/GitGutter)| Inline Git notifications                   |
 
 
@@ -35,19 +31,9 @@ Default theme used is zenburn (Thanks to Michael Clayton for his help). I have a
 
 ## Syntax
 * Asciidoc
-* Conky
-* Emender
-* Desktop shortcuts (Linux)
-* Javascript
-* Nginx
-* PHP
-* Snippets
 * Python
 * CSS
 * GitHub Markdown
-* Less
-* JSON
-* Groovy
 
 ## ASCIIDOC
 Sample template for an asciidoc article using the .adoc extension is included and syntax highlighting turned on for .adoc files. To use syntax highlighting on .txt files, you can use one of the following approaches.
