@@ -22,10 +22,6 @@ autocmd! BufNewFile * silent! 0r ~/.vim/templates/tmpl.%:e
 let g:DisableAutoPHPFolding = 1
 if has("autocmd")
   augroup module
-    autocmd BufRead,BufNewFile *.module set filetype=php
-    autocmd BufRead,BufNewFile *.install set filetype=php
-    autocmd BufRead,BufNewFile *.test set filetype=php
-    autocmd BufRead,BufNewFile *.info set filetype=php
     autocmd BufRead,BufNewFile *.css set filetype=css
     autocmd BufRead,BufNewFile *.desktop set filetype=desktop
     autocmd BufRead,BufNewFile *.less set filetype=less
@@ -70,21 +66,6 @@ func! WordProcessorMode()
   setlocal linebreak 
 endfu 
 com! WP call WordProcessorMode()
-
-" Airline plugin
-let g:airline#extensions#tabline#enabled = 1      
-let g:airline#extensions#tabline#left_sep = ''    
-let g:airline#extensions#tabline#left_alt_sep = ''
-let g:airline_detect_modified=1
-let g:airline_detect_paste=1
-let g:airline_theme='zenburn'
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
-" let g:airline_symbols.readonly = ''
-let g:airline_powerline_fonts=0
-let g:airline#extensions#branch#enabled=1
 
 function! Prose()
   call pencil#init()
