@@ -1,5 +1,12 @@
-call pathogen#infect()
-call pathogen#helptags()
+call plug#begin('~/.vim/plugged')
+  Plug 'junegunn/goyo.vim'
+  Plug 'scrooloose/syntastic'
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
+  Plug 'airblade/vim-gitgutter'
+  Plug 'reedes/vim-pencil'
+  Plug 'yegappan/taglist'
+call plug#end()
 
 filetype plugin indent on
 syntax on
@@ -52,18 +59,18 @@ nnoremap <S-left> :bprev<CR>
 nnoremap <S-right> :bnext<CR>
 
 " Wordprocessing mode
-func! WordProcessorMode() 
-  setlocal formatoptions=1 
-  setlocal noexpandtab 
-  map j gj 
+func! WordProcessorMode()
+  setlocal formatoptions=1
+  setlocal noexpandtab
+  map j gj
   map k gk
-  setlocal spell spelllang=en_gb 
+  setlocal spell spelllang=en_gb
   set thesaurus+=~/.vim/thesaurus/mthesaur.txt
   set complete+=s
   set formatprg=par
-  setlocal wrap 
-  setlocal linebreak 
-endfu 
+  setlocal wrap
+  setlocal linebreak
+endfu
 com! WP call WordProcessorMode()
 
 augroup pencil
