@@ -19,8 +19,6 @@ set cursorline
 
 autocmd! BufNewFile * silent! 0r ~/.vim/templates/tmpl.%:e
 
-" Using vim with Drupal http://drupal.org/node/29325
-let g:DisableAutoPHPFolding = 1
 if has("autocmd")
   augroup module
     autocmd BufRead,BufNewFile *.css set filetype=css
@@ -68,52 +66,15 @@ func! WordProcessorMode()
 endfu 
 com! WP call WordProcessorMode()
 
-function! Prose()
-  call pencil#init()
-
-  " manual reformatting shortcuts
-  nnoremap <buffer> <silent> Q gqap
-  xnoremap <buffer> <silent> Q gq
-  nnoremap <buffer> <silent> <leader>Q vapJgqap
-
-  " force top correction on most recent misspelling
-  nnoremap <buffer> <c-s> [s1z=<c-o>
-  inoremap <buffer> <c-s> <c-g>u<Esc>[s1z=`]A<c-g>u
-
-  " replace common punctuation
-  iabbrev <buffer> -- –
-  iabbrev <buffer> --- —
-  iabbrev <buffer> << «
-  iabbrev <buffer> >> »
-
-  " open most folds
-  setlocal foldlevel=6
-
-  " replace typographical quotes (reedes/vim-textobj-quote)
-  map <silent> <buffer> <leader>qc <Plug>ReplaceWithCurly
-  map <silent> <buffer> <leader>qs <Plug>ReplaceWithStraight
-
-  " highlight words (reedes/vim-wordy)
-  noremap <silent> <buffer> <F8> :<C-u>NextWordy<cr>
-  xnoremap <silent> <buffer> <F8> :<C-u>NextWordy<cr>
-  inoremap <silent> <buffer> <F8> <C-o>:NextWordy<cr>
-
-endfunction
-
-" automatically initialize buffer by file type
-autocmd FileType markdown,mkd,text,adoc call Prose()
-
 augroup pencil
   autocmd!
   autocmd FileType markdown,mkd call pencil#init()
   autocmd FileType text         call pencil#init()
 augroup END
 
-" invoke manually by command for other file types
-command! -nargs=0 Prose call Prose()
-
 " Distraction Free Writing
 function! s:goyo_enter()
+
 "  silent !tmux set status off
 "  silent !tmux list-panes -F '\#F' | grep -q Z || tmux resize-pane -Z
   set noshowmode
