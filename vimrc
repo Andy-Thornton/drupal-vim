@@ -3,6 +3,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'scrooloose/syntastic'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
+  Plug 'frazrepo/vim-rainbow'
   Plug 'airblade/vim-gitgutter'
   Plug 'reedes/vim-pencil'
   Plug 'yegappan/taglist'
@@ -23,6 +24,7 @@ set incsearch
 set t_Co=256
 set nonumber
 set cursorline
+let g:rainbow_active = 1
 
 autocmd! BufNewFile * silent! 0r ~/.vim/templates/tmpl.%:e
 

@@ -2,3 +2,6 @@
 .settings
 .idea/workspaces.xml
 .idea/tasks.xml
+.idea/
+.netrwhist
+plugged
