@@ -7,6 +7,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'airblade/vim-gitgutter'
   Plug 'reedes/vim-pencil'
   Plug 'yegappan/taglist'
+  Plug 'dense-analysis/ale'
 call plug#end()
 
 filetype plugin indent on
@@ -15,9 +16,14 @@ syntax on
 set nocompatible
 set expandtab
 
-set shiftwidth=2
+set shiftwidth=4
 set autoindent
+set softtabstop=4
+set tabstop=4
 set smartindent
+set textwidth=79
+set expandtab
+set autoindent
 set showmatch
 set ruler
 set incsearch
@@ -25,6 +31,7 @@ set t_Co=256
 set nonumber
 set cursorline
 let g:rainbow_active = 1
+let b:ale_linters = {'python': ['pylint']}
 
 autocmd! BufNewFile * silent! 0r ~/.vim/templates/tmpl.%:e
 
