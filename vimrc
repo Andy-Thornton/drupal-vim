@@ -8,6 +8,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'reedes/vim-pencil'
   Plug 'yegappan/taglist'
   Plug 'dense-analysis/ale'
+  Plug 'asciidoc/vim-asciidoc'
 call plug#end()
 
 filetype plugin indent on
