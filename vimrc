@@ -32,7 +32,6 @@ set t_Co=256
 set nonumber
 set cursorline
 let g:rainbow_active = 1
-let b:ale_linters = {'python': ['pylint']}
 
 autocmd! BufNewFile * silent! 0r ~/.vim/templates/tmpl.%:e
 
@@ -45,6 +44,11 @@ if has("autocmd")
   augroup END
 
 endif
+
+" Python settings
+let g:ale_sign_error = '>>'
+let g:ale_sign_warning = '--'
+let b:ale_linters = {'python': ['pylint']}
 
 if has('statusline')
   set laststatus=2
