@@ -46,8 +46,10 @@ if has("autocmd")
 endif
 
 " Python settings
-let g:ale_sign_error = '>>'
-let g:ale_sign_warning = '--'
+let g:ale_sign_error = '●'
+let g:ale_sign_warning = '»'
+highlight ALEErrorSign ctermbg=NONE ctermfg=red
+highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
 let b:ale_linters = {'python': ['pylint']}
 
 if has('statusline')
