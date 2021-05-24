@@ -7,7 +7,7 @@ I love using vim for all my development, I have included my setup in case anyone
 ## Quickstart 
 
 * Clone the repo and link it to your .vim folder in your homedrive. I use ~/.local/src/vim for all my projects, so once it's cloned, I link it like this
-* ln -s /home/<user>/.local/src/vim /home/<user>/.vim
+* ln -s /home/username/.local/src/vim /home/username/.vim
 * or if you want to clone it directly to your .vim folder, use "git clone git@github.com:CodePoetSarah/vim.git .vim"
 * Lastly, symlink the VIMRC and GVIMRC files to your home directory as .vimrc and gvirmrc
 * To install the plugins, use ":PlugInstall" and it will install them.
