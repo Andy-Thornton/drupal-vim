@@ -46,6 +46,18 @@ if has("autocmd")
 
 endif
 
+" Startify settings
+let g:startify_session_dir = '~/.vim/sessions'
+let g:startify_files_number = 5
+" Simplify the startify list to just recent files and sessions
+let g:startify_lists = [
+  \ { 'type': 'dir',       'header': ['   Recent files'] },
+  \ { 'type': 'sessions',  'header': ['   Saved sessions'] },
+  \ { 'type': 'bookmarks',  'header': ['   Bookmarks'] },
+  \ ]
+  
+let g:startify_bookmarks = [{'s': '~/.local/src'}, {'d': '~/.local/src/documentation-and-content'}, {'g': '~/.local/src/gdpr-automation'}]
+
 " Python settings
 let g:ale_sign_error = '●'
 let g:ale_sign_warning = '»'
