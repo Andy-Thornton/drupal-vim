@@ -48,7 +48,7 @@ endif
 
 " Startify settings
 let g:startify_session_dir = '~/.vim/sessions'
-let g:startify_files_number = 5
+let g:startify_files_number = 10
 " Simplify the startify list to just recent files and sessions
 let g:startify_lists = [
   \ { 'type': 'dir',       'header': ['   Recent files'] },
