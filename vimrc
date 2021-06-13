@@ -5,14 +5,19 @@ call plug#begin('~/.vim/plugged')
   Plug 'vim-airline/vim-airline-themes'
   Plug 'mhinz/vim-startify'
   Plug 'frazrepo/vim-rainbow'
-  Plug 'airblade/vim-gitgutter'
   Plug 'tpope/vim-fugitive'
+  Plug 'airblade/vim-gitgutter'
   Plug 'tpope/vim-rhubarb'
   Plug 'reedes/vim-pencil'
   Plug 'yegappan/taglist'
   Plug 'dense-analysis/ale'
+  Plug 'vim-scripts/AutoComplPop'
   Plug 'tpope/vim-vinegar'
   Plug 'asciidoc/vim-asciidoc'
+  Plug 'sheerun/vim-polyglot'  
+" Themes
+  Plug 'joshdick/onedark.vim'
+  Plug 'jnurmine/Zenburn'
 call plug#end()
 
 filetype plugin indent on
@@ -37,6 +42,7 @@ set nonumber
 set cursorline
 let g:rainbow_active = 1
 
+
 autocmd! BufNewFile * silent! 0r ~/.vim/templates/tmpl.%:e
 
 if has("autocmd")
@@ -54,6 +60,16 @@ let g:netrw_liststyle = 4
 let g:netrw_banner = 0
 let g:netrw_altv = 1
 
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
 " Startify settings
 let g:startify_session_dir = '~/.vim/sessions'
 let g:startify_files_number = 10
@@ -67,26 +83,13 @@ let g:startify_custom_header = [ ' -------------------------[ Sarah Thornton ]--
 let g:startify_custom_footer = [ ' -----------[ If it’s worth doing, it’s worth automating ]-----------' ]
 let g:startify_bookmarks = [{'s': '~/.local/src'}, {'d': '~/.local/src/documentation-and-content'}, {'g': '~/.local/src/gdpr-automation'}]
 
-" Python settings
-let g:ale_sign_error = '●'
-let g:ale_sign_warning = '»'
-highlight ALEErrorSign ctermbg=NONE ctermfg=red
-highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
-let b:ale_linters = {'python': ['pylint']}
+" Ale settings
+let g:ale_sign_error = '⋗'
+let g:ale_sign_warning = '⋗'
+" Some fun symbols to use ⊖ ⊕ ∻ ⊙ ⊏ ⊞ ⊠ ⊧ ⊳ ⋗  
+let g:ale_set_highlights = 1
 
-if has('statusline')
-  set laststatus=2
-  set statusline=%<%f\ " Filename
-  set statusline+=%w%h%m%r " Options
-  set statusline+=%{fugitive#statusline()} " Git Hotness
-  set statusline+=\ [%{&ff}/%Y] " filetype
-  set statusline+=\ [%{getcwd()}] " current dir
-  set statusline+=%#warningmsg#
-  set statusline+=%{SyntasticStatuslineFlag()}
-  set statusline+=%*
-  let g:syntastic_enable_signs=1
-  set statusline+=%=%-14.(%l,%c%V%)\ %p%% " Right aligned file nav info
-endif
+let b:ale_linters = {'python': ['pylint']}
 
 " Setup the path the ctags for code profiling
 let Tlist_Ctags_Cmd = "/usr/bin/ctags"
@@ -96,21 +99,6 @@ let Tlist_WinWidth = 50
 nnoremap <S-left> :bprev<CR>
 nnoremap <S-right> :bnext<CR>
 
-" Wordprocessing mode
-func! WordProcessorMode()
-  setlocal formatoptions=1
-  setlocal noexpandtab
-  map j gj
-  map k gk
-  setlocal spell spelllang=en_gb
-  set thesaurus+=~/.vim/thesaurus/mthesaur.txt
-  set complete+=s
-  set formatprg=par
-  setlocal wrap
-  setlocal linebreak
-endfu
-com! WP call WordProcessorMode()
-
 augroup pencil
   autocmd!
   autocmd FileType markdown,mkd call pencil#init()
@@ -119,7 +107,6 @@ augroup END
 
 " Distraction Free Writing
 function! s:goyo_enter()
-
 "  silent !tmux set status off
 "  silent !tmux list-panes -F '\#F' | grep -q Z || tmux resize-pane -Z
   set noshowmode
@@ -152,10 +139,11 @@ autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
 " Handy mappings
-map <F2> :Goyo<cr>
+  map <F2> :Goyo<cr>
 
-set background=dark
-colors zenburn
-let g:zenburn_force_dark_Background = 1
-let g:zenburn_high_Contrast=1
-syn on
+" Theme
+  set background=dark
+  colorscheme zenburn
+  let g:zenburn_high_Contrast=1
+  
+
