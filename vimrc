@@ -3,6 +3,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'scrooloose/syntastic'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
+  Plug 'mhinz/vim-startify'
   Plug 'frazrepo/vim-rainbow'
   Plug 'airblade/vim-gitgutter'
   Plug 'reedes/vim-pencil'
