@@ -1,44 +1,15 @@
 
-<!-- vim-markdown-toc GFM -->
-* [Introduction](#introduction)
-* [Plugins](#plugins)
-* [Python](#python)
-* [Themes](#themes)
-* [Syntax](#syntax)
-* [ASCIIDOC](#asciidoc)
-
-<!-- vim-markdown-toc -->
-
 
 Introduction
 ------------
-I gave a [Demo](http://bit.ly/drupal-development-with-vim) of my Vim setup that I use for Drupal and general Linux development a while back. Here's my current Vim setup. I'll work on improving the documentation when I have free time. Let me know if you find any problems or have suggestions for improvements. 
+I love using vim for all my development, I have included my setup in case anyone wants to play with it. It's predominantly setup for writing prose as well as development in Python. 
 
-## Plugins 
+## Quickstart 
 
-| Plugin   | Description|
-|-------------|------------------------------------------------------------------------------------------------|
-| [Taglist](http://www.vim.org/scripts/script.php?script_id=273)  | Support for code profiling, using CTAGS    |
-| [Bash Support](http://www.vim.org/scripts/script.php?script_id=365)| Improved Bash Scripting  Support        |
-| [GitGutter](https://github.com/jisaacks/GitGutter)| Inline Git notifications                   |
-
-
-## Python 
-Python syntax included along with code referenced in this article  http://henry.precheur.org/vim/python
-
-## Themes
-Default theme used is zenburn (Thanks to Michael Clayton for his help). I have a number of themes installed, you can change the theme for both vim and gvim in their config files.
-
-## Syntax
-* Asciidoc
-* Python
-* CSS
-* GitHub Markdown
-
-## ASCIIDOC
-Sample template for an asciidoc article using the .adoc extension is included and syntax highlighting turned on for .adoc files. To use syntax highlighting on .txt files, you can use one of the following approaches.
-
-* use the command :set syntax=asciidoc
-* add to the bottom of the file  //vim: set syntax=asciidoc
-
-For more information, checkout the asciidoc github repo https://github.com/asciidoc/vim-asciidoc
+* Clone the repo and link it to your .vim folder in your homedrive. I use ~/.local/src/vim for all my projects, so once it's cloned, I link it like this
+* ln -s /home/username/.local/src/vim /home/username/.vim
+* or if you want to clone it directly to your .vim folder, use "git clone git@github.com:CodePoetSarah/vim.git .vim"
+* Lastly, symlink the VIMRC and GVIMRC files to your home directory as .vimrc and gvirmrc
+* To install the plugins, use ":PlugInstall" and it will install them.
+  
+If you have a problem or a question, raise a ticket in the issue que and I will look at it when I can.
