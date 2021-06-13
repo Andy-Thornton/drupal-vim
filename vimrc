@@ -15,8 +15,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-vinegar'
   Plug 'asciidoc/vim-asciidoc'
   Plug 'sheerun/vim-polyglot'  
-" Themes
-  Plug 'joshdick/onedark.vim'
   Plug 'jnurmine/Zenburn'
 call plug#end()
 
@@ -69,6 +67,12 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+" Airlines
+let g:airline_solarized_bg='dark'
+let g:airline_theme='zenburn'
+let g:airline_powerline_fonts = 1
+
 
 " Startify settings
 let g:startify_session_dir = '~/.vim/sessions'
