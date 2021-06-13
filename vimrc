@@ -6,9 +6,12 @@ call plug#begin('~/.vim/plugged')
   Plug 'mhinz/vim-startify'
   Plug 'frazrepo/vim-rainbow'
   Plug 'airblade/vim-gitgutter'
+  Plug 'tpope/vim-fugitive'
+  Plug 'tpope/vim-rhubarb'
   Plug 'reedes/vim-pencil'
   Plug 'yegappan/taglist'
   Plug 'dense-analysis/ale'
+  Plug 'tpope/vim-vinegar'
   Plug 'asciidoc/vim-asciidoc'
 call plug#end()
 
@@ -46,10 +49,14 @@ if has("autocmd")
 
 endif
 
+" Hacking netrw
+let g:netrw_liststyle = 4
+let g:netrw_banner = 0
+let g:netrw_altv = 1
+
 " Startify settings
 let g:startify_session_dir = '~/.vim/sessions'
 let g:startify_files_number = 10
-" Simplify the startify list to just recent files and sessions
 let g:startify_lists = [
   \ { 'type': 'bookmarks',  'header': ['   Bookmarks'] },
   \ { 'type': 'dir',       'header': ['   Recent files'] },
