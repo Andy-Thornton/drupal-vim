@@ -57,6 +57,7 @@ let g:startify_lists = [
   \ ]
   
 let g:startify_custom_header = [ ' -------------------------[ Sarah Thornton ]-------------------------' ]
+let g:startify_custom_footer = [ ' -----------[ If it’s worth doing, it’s worth automating ]-----------' ]
 let g:startify_bookmarks = [{'s': '~/.local/src'}, {'d': '~/.local/src/documentation-and-content'}, {'g': '~/.local/src/gdpr-automation'}]
 
 " Python settings
