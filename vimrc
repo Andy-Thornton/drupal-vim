@@ -11,7 +11,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'reedes/vim-pencil'
   Plug 'yegappan/taglist'
   Plug 'dense-analysis/ale'
-  Plug 'vim-scripts/AutoComplPop'
+  Plug 'ycm-core/YouCompleteMe'
   Plug 'tpope/vim-vinegar'
   Plug 'asciidoc/vim-asciidoc'
   Plug 'sheerun/vim-polyglot'  
@@ -85,7 +85,7 @@ let g:startify_lists = [
   
 let g:startify_custom_header = [ ' -------------------------[ Sarah Thornton ]-------------------------' ]
 let g:startify_custom_footer = [ ' -----------[ If it’s worth doing, it’s worth automating ]-----------' ]
-let g:startify_bookmarks = [{'s': '~/.local/src'}, {'d': '~/.local/src/documentation-and-content'}, {'g': '~/.local/src/gdpr-automation'}]
+let g:startify_bookmarks = [{'s': '~/.local/src'}, {'p': '~/.local/src/perfume'},{'g': '~/.local/src/github-transition'}]
 
 " Ale settings
 let g:ale_sign_error = '⋗'
@@ -147,7 +147,4 @@ autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
 " Theme
   set background=dark
-  colorscheme zenburn
-  let g:zenburn_high_Contrast=1
-  
-
+  colorscheme nord
