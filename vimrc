@@ -3,6 +3,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'scrooloose/syntastic'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
+  Plug 'ycm-core/YouCompleteMe'
+  Plug 'vim-scripts/AutoComplPop'
   Plug 'mhinz/vim-startify'
   Plug 'frazrepo/vim-rainbow'
   Plug 'tpope/vim-fugitive'
@@ -11,7 +13,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'reedes/vim-pencil'
   Plug 'yegappan/taglist'
   Plug 'dense-analysis/ale'
-  Plug 'vim-scripts/AutoComplPop'
   Plug 'tpope/vim-vinegar'
   Plug 'asciidoc/vim-asciidoc'
   Plug 'sheerun/vim-polyglot'  
@@ -72,7 +73,7 @@ let g:syntastic_check_on_wq = 0
 let g:airline_solarized_bg='dark'
 let g:airline_theme='zenburn'
 let g:airline_powerline_fonts = 1
-
+let g:airline_skip_empty_sections = 1
 
 " Startify settings
 let g:startify_session_dir = '~/.vim/sessions'
@@ -88,7 +89,7 @@ let g:startify_custom_footer = [ ' -----------[ If it’s worth doing, it’s wo
 let g:startify_bookmarks = [{'s': '~/.local/src'}, {'d': '~/.local/src/documentation-and-content'}, {'g': '~/.local/src/gdpr-automation'}]
 
 " Ale settings
-let g:ale_sign_error = '⋗'
+let g:ale_sign_error = '⊳'
 let g:ale_sign_warning = '⋗'
 " Some fun symbols to use ⊖ ⊕ ∻ ⊙ ⊏ ⊞ ⊠ ⊧ ⊳ ⋗  
 let g:ale_set_highlights = 1
@@ -147,7 +148,6 @@ autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
 " Theme
   set background=dark
-  colorscheme zenburn
-  let g:zenburn_high_Contrast=1
+  colorscheme nord
   
 
